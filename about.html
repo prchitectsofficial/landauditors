@@ -18,7 +18,7 @@
                     <span>TRUSTED LEGAL AUDITS</span>
                 </div>
                 <div class="top-bar-right">
-                    <a href="https://wa.me/919876543210" class="whatsapp-link" target="_blank">
+                    <a href="https://wa.me/918505831552" class="whatsapp-link" target="_blank">
                         <i class="fab fa-whatsapp"></i> WhatsApp
                     </a>
                 </div>
@@ -34,14 +34,19 @@
                     <i class="fas fa-landmark"></i>
                     <span>LAND AUDITORS</span>
                 </div>
-                <ul class="nav-menu">
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <ul class="nav-menu" id="nav-menu">
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="about.html" class="active">ABOUT</a></li>
                     <li><a href="index.html#services">SERVICES</a></li>
                     <li><a href="index.html#testimonials">TESTIMONIALS</a></li>
                     <li><a href="index.html#contact">CONTACT</a></li>
                 </ul>
-                <a href="https://wa.me/919876543210" class="cta-button" target="_blank">MAKE A CALL</a>
+                <a href="tel:+918505831552" class="cta-button" target="_blank">MAKE A CALL</a>
             </nav>
         </div>
     </header>
@@ -136,7 +141,7 @@
                     This guarantee reflects our commitment to providing thorough, accurate, and valuable legal audits. We believe 
                     in transparency and accountability, ensuring that you receive the quality service you deserve.
                 </p>
-                <a href="https://wa.me/919876543210" class="btn btn-primary" target="_blank">
+                <a href="https://wa.me/918505831552" class="btn btn-primary" target="_blank">
                     <i class="fab fa-whatsapp"></i> GET STARTED WITH CONFIDENCE
                 </a>
             </div>
@@ -215,11 +220,11 @@
                 <h2 class="cta-title">Ready to Protect Your Investment?</h2>
                 <p class="cta-subtitle">Get in touch with us today for a free consultation</p>
                 <div class="cta-buttons">
-                    <a href="https://wa.me/919876543210" class="btn btn-primary" target="_blank">
+                    <a href="https://wa.me/918505831552" class="btn btn-primary" target="_blank">
                         <i class="fab fa-whatsapp"></i> START ON WHATSAPP
                     </a>
-                    <a href="https://wa.me/919876543210" class="btn btn-secondary" target="_blank">
-                        <i class="fas fa-phone"></i> CHAT A CALL
+                    <a href="tel:+918505831552" class="btn btn-secondary" target="_blank">
+                        <i class="fas fa-phone"></i> MAKE A CALL
                     </a>
                 </div>
             </div>
@@ -227,7 +232,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" id="contact">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
@@ -253,8 +258,8 @@
                     <h4 class="footer-title">CONTACT</h4>
                     <ul class="footer-links">
                         <li><i class="fas fa-map-marker-alt"></i> Dehradun, Uttarakhand</li>
-                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
-                        <li><i class="fab fa-whatsapp"></i> WhatsApp Us</li>
+                        <li><a href="tel:+918505831552"><i class="fas fa-phone"></i> +91 85058 31552</a></li>
+                        <li><a href="https://wa.me/918505831552" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -272,6 +277,33 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Hamburger menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>
 
