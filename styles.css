@@ -64,6 +64,32 @@ body {
     gap: 20px;
 }
 
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.social-link {
+    color: var(--white);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s;
+    font-size: 14px;
+}
+
+.social-link:hover {
+    background-color: var(--gold);
+    color: var(--primary-teal);
+    transform: translateY(-2px);
+}
+
 .top-bar-link {
     color: var(--white);
     text-decoration: none;
@@ -1029,6 +1055,17 @@ body {
     .top-bar-right {
         flex-direction: column;
         gap: 10px;
+    }
+
+    .social-links {
+        gap: 8px;
+        justify-content: center;
+    }
+
+    .social-link {
+        width: 28px;
+        height: 28px;
+        font-size: 12px;
     }
 
     .make-call-button {
